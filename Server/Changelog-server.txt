@@ -1,0 +1,193 @@
+---------------------------------------
+ARGENTUM ONLINE - CHANGELOG DEL SERVER
+---------------------------------------
+
+
+- 0.11.5
+
+ * 05/03/2006: Implementación de los comandos /CIUMSG, /CAOSMSG, /CRIMS y /REALMSG pedidos por Pol'Thalas (Maraxus).
+ * 06/03/2006: Corrección de todos los bugs reportados y cerrados en el bug tracker de SF (Maraxus).
+ * 09/03/2006: Implementación de los comandos /MOD de HEAD y BODY y /FORCEMIDIMAP para RMs y dioses pedidos por Pol'Thalas (Maraxus).
+ * 10/03/2006: Corregí el bug que eliminaba mascotas y elementales al hacer worldsave - queda el código viejo por si había un motivo para esto del que no se sabía (Maraxus).
+ * 10/03/2006: Implementación del comando /TALKAS para RMs y dioses pedido por Pol'Thalas (Maraxus).
+ * 10/03/2006: Eliminé todo lo relativo a padrinos y anticuelgue que quedaba así como grandes porciones de código comentadas que ofuscaban. (Maraxus).
+ * 10/03/2006: Eliminé variables de objetos que no se usaban nunca (Maraxus).
+ * 10/03/2006: Comencé a tipar constantes, puse TODOs en futuros enums, hice constantes algunos arrays, puse modificadores de acceso y eliminé arrays implícitos de Main que sólo ocupaban memoria (Maraxus).
+ * 10/03/2006: Implementación del comando /FORCEWAVMAP pedido por Pol'Thalas - las coords x e y tendrán sentido con el panning de sonido en la 11.6 (Maraxus).
+ * 10/03/2006: Corrección de bugs menores en /FORCEMIDIMAP y agregado de mensaje de error con instrucciones de uso. (Maraxus).
+ * 11/03/2006: A pedido de Pol'Thalas hice que los comandos de mensajes a ciudas, crimis, caos y real pudiese o no llevar un fonttype. (Maraxus).
+ * 11/03/2006: Declaré nuevas constantes eliminando así cálculos y expresiones innecesarias. (Maraxus).
+ * 11/03/2006: Implementé el centinela de IAO con algunos cambios. (Maraxus).
+ * 11/03/2006: Corregí el como funciona el comando /MOD para RMs... aparentemente debería existir una tercer categoría que no existe... (Maraxus).
+ * 13/03/2006: Corregí el bug 1449113 ( el/SHOWCMSG cierra el cliente ). (Maraxus).
+ * 14/03/2006: Reacomodé constantes, eliminé cosas de más. (Maraxus).
+ * 14/03/2006: Se implementó el comando /IRCERCA (hecho por Patenke). (Maraxus).
+ * 14/03/2006: Cambié los sendroutes por un enum. (Maraxus).
+ * 14/03/2006: Puse la AI como enum y tipé más de 50 constantes. (Maraxus).
+ * 15/03/2006: Arreglé el counter de trabajando para el Centinela y puse With en los métodos ResetUser* (Maraxus).
+ * 15/03/2006: Puse los logs en el Centinela para eventos "anormales", y poder revisar aciones sospechosas (Maraxus).
+ * 15/03/2006: Corregí el bug que eliminaba NPCs cuando bloqueabas con las skills de uso de escudos y tácticas de combate en 0 (Maraxus).
+ * 15/03/2006: Eliminé módulos innecesarios, tipé constantes, moví algunas cosas de lugar (Maraxus).
+ * 16/03/2006: Eliminé un módulo innecesario, creé nuevos enums para reempazar constantes y los implementé en el resto del código (Maraxus).
+ * 18/03/2006: Corregí algunos bugs que impedían que uno se loguease. Para hacerlo sin seguridad deben desactivar el chqueo de MD5 en el server.ini!! (Maraxus).
+ * 18/03/2006: Ya no te deja comerciar tu barco con otro usuario mientras lo tengas equipado (Maraxus).
+ * 18/03/2006: Corregido el bug que hacía el mimetismo no tuviese efecto (Maraxus).
+ * 18/03/2006: Implemente mensajes de party overhead y los comandos /ONLINEREAL y /ONLINECAOS (Maraxus).
+ * 18/03/2006: Corregí un bug en la validación del cliente al crear personajes (Maraxus).
+ * 19/03/2006: Corregí un bug al crear personajes. Ahora esto ya funciona nuevamente (Maraxus).
+ * 19/03/2006: Puse Option Explicit en todos los módulos, tipé un par de constantes que encontré perdidas y convertí los privilegios en un Enum (Maraxus).
+ * 20/03/2006: Corregí un bug en /IRCERCA (gracias a Patenke por el code) (Maraxus).
+ * 21/03/2006: Corregí bugs varios al vender items a un NPC. Limpié un poco el código de comercio. (Maraxus).
+ * 22/03/2006: Corregí un bug al cargar y grabar mapas en el server. (Maraxus).
+ * 22/03/2006: Hice que actualice las áreas al moverse el user (evita las desapariciones del PJ y los saltos feos). (Maraxus).
+ * 22/03/2006: Corregí el bug de que los PJs nuevos fuesen GMs. (Maraxus).
+ * 23/03/2006: Corregí los índices de los heads para evitar la gente que nacía sin cabeza. (Maraxus).
+ * 29/03/2006: Corregí un bug al procesar el mensaje "/CENTINELA" (Maraxus).
+ * 29/03/2006: Hice se resetease el flag CentinelaOK en ResetUserFlags (Maraxus).
+ * 29/03/2006: Corregí bugs menores con el centinela, hice que se vuelva a acercar al user al pasar 1 minuto (por si "no lo vió" la primera vez) (Maraxus).
+ * 29/03/2006: Hice que el centinela hable al clickearselo como cualquier otro NPC. El texto depende del user que lo clickea (Maraxus).
+ * 29/03/2006: Corregí el bug que te pateaba si enviabas un /CENTINELA antes de que este aparezca por primera vez (Maraxus).
+ * 29/03/2006: Corregí el bug que no cancelaba el comercio seguro si no se cierra con "/salir" (Maraxus).
+ * 29/03/2006: Corregí el bug que copiaba el equipo del GM sobre el user al que se le hacía un /MOD de BODY o HEAD (Maraxus).
+ * 30/03/2006: Implementé el comando /SHOWNAME pedido por Pol'Thalas (Maraxus).
+ * 30/03/2006: Rehabilité el ver el clan al pasar el mouse sobre un PJ (Maraxus).
+ * 31/03/2006: Corregí el /STAT para que funcione con PJs offline (Maraxus).
+ * 31/03/2006: Modifiqué los dados según pidió GD (Maraxus).
+ * 31/03/2006: Eliminé los chequeos de atributos válidos que eran obsoletos (Maraxus).
+ * 31/03/2006: Corregí un bug con /SHOWNAME (Maraxus).
+ * 31/03/2006: Eliminé los atributos de la lista de argumentos de ConnectNewUser (Maraxus).
+ * 31/03/2006: /ROL envia un mensaje notificando que el envío se realizó (Maraxus).
+ * 31/03/2006: /INV leía el número de objetos de la bóveda y no del inventario si el PJ estaba offline (Maraxus).
+ * 1/04/2006: El centinela ya no pide la contraseña al pasar un minuto si ya se le respondió (Maraxus).
+ * 1/04/2006: El ValCode y MD5 se pusieron al final del OLOGIN para evitar problemas si el MD5 contenía comas (Maraxus).
+ * 1/04/2006: Eliminé el head y el body del NLOGIN (eran ceros) (Maraxus).
+ * 1/04/2006: Hice que los NPCs actualicen sus áreas al moverse (Maraxus).
+ * 5/04/2006: Ocultarse e Invisibilidad ya no son lo mismo (Maraxus).
+ * 5/04/2006: Limpié el ResetNPCFlags (Maraxus).
+ * 5/04/2006: Eliminé AddToVar (Maraxus).
+ * 6/04/2006: Los object type de escudos y cascos estaban invertidos (Maraxus).
+ * 6/04/2006: Corregí un bug que impedía que los NPCs tirasen hechizos (Maraxus).
+ * 6/04/2006: Corregí los comandos /caosmsg y /realmsg (Maraxus).
+ * 12/04/2006: Corregí bugs varios en comando comos /talkas, /trigger y varios otros puntos de la lógica de juego (Maraxus).
+ * 14/04/2006: Comando /MOd usa "+" en lugar de " " en los nicks (Maraxus).
+ * 14/04/2006: El comando /BANIP pide un motivo del ban (Maraxus).
+ * 14/04/2006: Consejeros RMs pueden agarrar y tirar items (Maraxus).
+ * 14/04/2006: Consejeros GMs no puede atacar criaturas ni usar RMATA en el mapa pretoriano (Maraxus).
+ * 14/04/2006: Al tirar un item si hay otro igual en el piso se ponen juntos (Maraxus).
+ * 14/04/2006: Corregí el código de los sonidos de mapa, ahora funcionan correctamente (Maraxus).
+ * 19/04/2006: Corregí un bug que permitía a los NPCs atacar a GMs con /invisible (Maraxus).
+ * 19/04/2006: Corregí bugs en comandos de GMs como /TRABAJANDO, /ONLINEREAL y /ONLINECAOS (Maraxus).
+ * 19/04/2006: Los mensajes /CAOSMSG, /REALMSG, /CUMSG y /CRIMSG se envian también a RMs y aclaran a quienes van dirijidos (Maraxus).
+ * 19/04/2006: El centinela ya no revisa a users ocultandose (Maraxus).
+ * 19/04/2006: Se creó el comando /OCULTANDO para que los GMs puedan revisar a los users ocultandose para detectar macros (Maraxus).
+ * 19/04/2006: Se utiliza clsLeerInis para muchas cosas que antes usaban GetVar por eficiencia (Maraxus).
+ * 19/04/2006: Corregí /ONLINEREAL y /ONLINECAOS (Maraxus).
+ * 21/04/2006: El cura te cura y revive con doble click (Maraxus).
+ * 21/04/2006: Las armaduras faccionarias se pueden vender independientemente de tu alineación (Maraxus).
+ * 21/04/2006: La bóveda se abre con doble click (Maraxus).
+ * 21/04/2006: Se solucionó un bug que entregaba mal las armaduras del caos (Maraxus).
+ * 21/04/2006: Se solucionó un bug que dejaba que te equipes armaduras faccionarias sin ser de esa facción (Maraxus).
+ * 24/04/2006: Se corrigieron /MOD del BODY y HEAD en PJs offline porque funcionaba al revés. (Maraxus).
+ * 24/04/2006: Último bug del centinela, al banear tiraba un error generando un clon. (Maraxus).
+ * 25/04/2006: Los NPCs pretorianos ahora actualizan sus áreas. (Maraxus).
+
+- 0.12.0
+
+ * 27/04/2006: Se incluyó la clase clsByteQueue utilizada en el nuevo protocolo. (Maraxus).
+ * 27/04/2006: No se permite invocar criaturas en zona segura por trigger o por mapa. (Maraxus).
+ * 17/05/2006: Se eliminó la variable FIT de UserStats que no se usaba nunca. (Maraxus).
+ * 03/06/2006: Cambios de Balance y GD. (Energía gastada al robar, daño de apuñalada, Sacerdotes Pretorianos remueven efecto de ocultarse) (Integer).
+ * 09/06/2006: Cambios de Balance y GD. (El golpe del user es absorbido tanto por la armadura como por el escudo, reparticion de exp de los NPC, Mensajes de party overhead,  muertos no ven vida de NPC ) (Integer).
+ * 11/06/2006: Se cambiaron algunos tipos de miembros de UserFlags para adecuarlos a su uso real (Maraxus).
+ * 15/06/2006: Se modificó ligeramente clsByteQueue para que trabaje tirando códigos de error al intentarse pasar los límites del buffer para lecutra y/o escritura (Maraxus).
+ * 16/06/2006: El Rey Pretoriano ya no puede ser atacado mientras haya miembros vivos de su clan (Integer).
+ * 23/06/2006: Eliminé algunas líneas que no se ejecutaban nunca porque los Ifs siempre daban False, cambié tipos de variables de facción y stats y modifiqué la constante MAXUSERMATADOS (Maraxus).
+ * 23/06/2006: Se abstrajo completamente la lista de Guilds, sólo es accesible por modGuilds. Muchos arrays como NPCList y Charlist se hicieron constantes. (Maraxus).
+ * 24/06/2006: Eliminé argumentos de varios paquetes que no eran necesarios (el cliente ni se molestaba en levantarlos). (Maraxus).
+ * 29/06/2006: Las herramientas ahora son consideradas armas. (Integer)
+ * 29/06/2006: El golpe de un User siempre te desconcentra de la meditacion. (Integer)
+ * 29/06/2006: Los golpes de NPCs te pueden desconcentrar mientras meditás. (Integer)
+ * 29/06/2006: Agregué la base de un sistema de estadísticas para data mining. (Maraxus)
+ * 29/06/2006: Los mensajes de party y de clan ya no aparecen overhead. (Maraxus)
+ * 01/07/2006: Agregué parseo de chats de todo tipo para analizar su peso en el tráfico delservidor y armar un Huffman de ser necesario. (Maraxus)
+ * 05/07/2006: Corregí el bug que te pateaba al usar la última flecha. (Maraxus)
+ * 06/07/2006: Corregí el bug que te permitía comerciar y usar la bóveda con doble click estando muerto. (Maraxus)
+ * 07/07/2006: Eliminé varias variables de tHechizos que no se usaban en ninguna parte del code. (Integer)
+ * 09/07/2006: Corregí un bug que permitía mandar PM a dioses y GMs bajo ciertas condiciones. (Maraxus)
+ * 18/07/2006: Corregí un un RT 5 al desconectar usuarios y un RT 9 al conectar usuarios en posiciones inválidas. (Maraxus)
+ * 20/07/2006: Cambiada formula de posibilidades de apuñalar. (Integer)
+ * 21/07/2006: Agregue Barcas faccionarias. (Integer)
+ * 27/07/2006: Corregí los mensajes que se enviaban al apuñalar (gracias Toxic por el dato). (Maraxus)
+ * 27/07/2006: Eliminé toda referencia a DescargaNpcsDat que no hacía nada (gracias Shura pro el dato) y corregí un error importante al recargar un ini. (Maraxus)
+ * 27/07/2006: Mejoré el método SubirSkill (gracias a Nigo por el código y a Patenke por el patch). (Maraxus)
+ * 04/08/2006: Corregí un bug al calcular el daño hecho al apuñalar un NPC. (Maraxus)
+ * 23/08/2006: Corregí las posibilidades de que llueva, ahora hay 1 posibilidad en 20 de que llueva en vez de 1 en 10. (Integer)
+ * 23/08/2006: Realizadas correcciones para que los usuarios ignoren a los Administradores. (^[GS]^)
+ * 12/09/2006: A los GMs y demás no les baja ni el hambre ni la sed. (Integer)
+ * 12/09/2006: Activé el comando "/seguir" a los GMs y Consejeros. (Integer)
+ * 01/10/2006: Consejeros pueden comprar pero no vender. (Integer)
+ * 10/10/2006: /Seguir quita efectos de paralisis. (Integer)
+ * 10/10/2006: /ShowName también impide que tu nombre se vea cuando te lanzan hechizos. (Integer)
+ * 18/12/2006: Nuevo protocolo completo en un 70% aproximadamente. Lo subo para que el resto pueda colaborar a escribirlo. Queda pendiente implementarlo. (Maraxus)
+ * 24/12/2006: Corregí un bug que permitía escuchar conversaciones de otros clanes. (Maraxus)
+ * 27/12/2006: Corregí una docena de bugs de antaño... Entre ellos el que /Dest funcione con teleports, el que /DT sin clickear a nada te patee, el que /APASS no asigna la pass que se acaba de setear con /PASSWD, etc. (Maraxus)
+ * 31/12/2006: Admin.bas, AI_NPC.bas y Comercio.bas han sido arreglados para funcionar con el protocolo nuevo (Tavo)
+ * 31/12/2006: Modificaciones menores a algunos paquetes. (Maraxus)
+ * 31/12/2006: Acciones.bas, FileIO.bas, GameLogic.bas y General.bas han sido arreglados para funcionar con el protocolo nuevo (Tavo)
+ * 31/12/2006: Reescribí SendData y agregué muchos métodos en modAreas. (Maraxus)
+ * 31/12/2006: Varias mejoras de performance en varios algoritmos distintos. La encriptación de paquetes es ahora casi 3 veces más rápida. (Maraxus)
+ * 31/12/2006: Algunos arreglos al protocolo, bugs que encontró NIGO. (Maraxus)
+ * 03/01/2007: Modulo_InventANDobj.bas, invUsuario.bas, Matematicas.bas y mdlCOmercioConUsuario.bas han sido arreglados para funcionar con el protocolo nuevo (Tavo)
+ * 03/01/2007: mdParty.bas, ModAreas.bas, modBanco.bas y modCentinela.bas han sido arreglados para funcionar con el protocolo nuevo (Tavo)
+ * 04/01/2007: modFaccionas.bas, modGuilds.bas, modHechizos.bas, modHexaStrings.bas y modInvisibles.bas han sido arreglados para funcionar con el protocolo nuevo (Tavo)
+ * 04/01/2007: Nuevos PrepareMessage necesarios para implementar el nuevo protocolo (Maraxus)
+ * 04/01/2007: Algunos SendData que quedaron han sido rescritos (Tavo)
+ * 04/01/2007: Corrigiendo bugs de Tavo... (Maraxus)
+ * 06/01/2007: ahora InMapBounds chequea que el mapa sea correcto (NIGO)
+ * 06/01/2007: Modifique algunos senddata para que funcionen, agregué algunos FlushBuffer (en timers y funciones que mandan mensajes a otros usuarios por medio de write (tengan eso en cuenta ^^)) y correjí algunitos bugs. (liquid)
+ * 06/01/2007: Trabaje mas en varios otros módulos, deje algunos "'CHECK" (sin las comillas) para que alguien mas (o yo mas tarde) revise algunas cosas que no entendí o no tube tiempo de terminar. (liquid)
+ * 07/01/2007: revisé varios CHECK de Liquid. Quedan 3 PrepareMessage pendientes, los escribo en un rato. También hay que volver privados a los envíos a áreas dejando para eso el uso de SendData. (Maraxus)
+ * 07/01/2007: Agregados los 3 PrepareMessage que faltaban. (Maraxus)
+ * 07/01/2007: Creé el módulo modSendData con todos los métodos de envios por áreas y el SendData como interfaz. (Maraxus)
+ * 07/01/2007: MODULO_NPC.bas ha sido arreglados para funcionar con el protocolo nuevo (Tavo)
+ * 07/01/2007: Escribí el PrepareMessage de CharacterMove. (Maraxus)
+ * 07/01/2007: preatorians.bas ha sido arreglados para funcionar con el protocolo nuevo (Tavo)
+ * 08/01/2007: Corrigiendo bugs, y senddatas que faltaron.., todavia quedan en modUsuarios (los que marque con 'CHECK porq me canse) y en SistemaCombate.. todos. (liquid)
+ * 08/01/2007: SistemaCombate.bas ha sido arreglados para funcionar con el protocolo nuevo (Tavo)
+ * 08/01/2007: Agregue algunas que faltaron en SistemaCombate. (liquid) 
+ * 08/01/2007: Corregi un bug en el nuevo protocolo que hacia imposible descativar el seguro xD (NIGO)
+ * 08/01/2007: Cambiadas MakeObj,EraseObj, y las correspondientes para usuarios y npc's, ahora toman la ruta como un booleano, True=Al Mapa, False=Al User.., arerglados algunos bugs, y reemplazados todas las asignaciones "" por vbnullstring... y las comparaciones a "" por lenb. (liquid)
+ * 08/01/2007: Termine con los mensajes CharacterCreate que restaban en MoDuLo_Usuarios.bas. Puse algunos checks importantes. (Tavo)
+ * 09/01/2007: Termine con algunos errores de compilacion que quedaba y modifique HandleRequestUserList. (Tavo)
+ * 09/01/2007: Agregue le Character.bas al proyecto y correji los ultimos errores de compilacion, al fin compila! (Tavo)
+ * 09/01/2007: HandleIncomingData() ahora es recursivo mientras siga teniendo datos para procesar y no halla ningun error de falta de datos (Tavo)
+ * 10/01/2007: Corregi un bug en "/MEMBERLIST" que dejaba a cualquiera que lo use ver la lista de cualquier clan. (NIGO)
+ * 10/01/2007: EnviarDatosASlot no encola mas y utiliza la Byte Queue (Tavo)
+ * 10/01/2007: Todo rastro de ColaSalida ha sido borrado y remplazado por el outgoingData Buffer en los casos necesarios (Tavo)
+ * 10/01/2007: BUG #1629288, #1477130 y #1479156 reparados. (Tavo)
+ * 10/01/2007: Correción de varios BUGs (Tavo)
+ * 12/01/2007: /STAT ahora envia el status de la persona y su facción (Si la tiene) (Tavo)
+ * 13/01/2007: Arregle algunas cositas de /STAT que estaban mal y no compilaba (Maraxus)
+ * 13/01/2007: Escribí el FlushBuffer, el server estaría listo para empezar a testear (Maraxus)
+ * 13/01/2007: reescribí los métodos que manejaban nuevos mensajes de recibidos de clientes a nivel socket (Maraxus)
+ * 13/01/2007: Corregí los bytes mínimos necesarios para el paquet de crear un PJ (Maraxus)
+ * 13/01/2007: Arregle la carga de charfiles para permitir cargar PJs recién creados (Maraxus)
+ * 14/01/2007: Evitados los ciclos infinitos en HandleIncomingData. (Maraxus)
+ * 15/01/2007: Ahora el cliente loguea y ve stats e inventario. (Maraxus)
+ * 18/01/2007: Corregí un bug con los PMs. (Maraxus)
+ * 18/01/2007: Corregí el /SEG. (Maraxus)
+ * 18/01/2007: Arregle un rt9 en DotileEvents, y ahora el server no te dropea cuando tiene ganas.. (liquid)
+ * 18/01/2007: Andan las estadísticas. (Maraxus)
+ * 18/01/2007: Agregué un par de casos donde debía saltar la NOT_ENOUGH_DATA exception. (Maraxus)
+ * 08/02/2007: Agrego los cambios de Toxic, tengan en cuenta que los PJs deben crearse de cero para poder loguear. (Maraxus)
+ * 25/02/2007: código listo salvo pr posibles bugs. (Maraxus)
+ * 01/03/2007: Privilegios y Restricciones Implementadas. (NIGO)
+ * 31/03/2007: Tras un mes de bug-fixes agregamos algo nuevo. El comando /PING. (Maraxus)
+ * 26/06/2007: Se corrigieron bugs la última semana. (Integer, NIGO y Maraxus)
+ * 26/06/2007: Corregí una desincronización cliente-servidor. (Maraxus)
+ * 06/07/2007: Algunos bugs de permisos en /Lastip y BanCharacter arreglados. (Maraxus)
+ * 09/07/2007: Corregí un typo en el parche de yaer que causaba clone sy otras yerbas. (Maraxus)
+ * 09/07/2007: Corregí un un bug que permitía saber si hay GMs online con /acceptparty y /echarparty. (Maraxus)
+ * 10/07/2007: Corregí un bug en la clsByteQueue que causaba un rt9 al querer limpiarsela si estaba llena. (Maraxus)
+ * 16/07/2007: Corregí varias posibles desincronizaciones cliente-servidor. (Maraxus)
+ * 18/07/2007: Nuevas cosas delcentinela. Loguea más datos y permite saber a quein está visitando ahora. (Maraxus)

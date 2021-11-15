@@ -1,0 +1,14 @@
+[INIT]
+NumInvocaciones=1
+
+[1]
+CantidadNpc=1
+CantidadUsers=1
+TiempoInvocacion=5
+NpcInvocado=522
+NpcMap=1
+NpcX=49
+NpcY=49
+MAP1=1
+X1=50
+Y1=50

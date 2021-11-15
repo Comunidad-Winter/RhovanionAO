@@ -1,0 +1,58 @@
+'Oso: NO USEN EL ESCUDO 2 (Es "No Animar" ^^)
+
+[INIT]
+NumEscudos=10
+
+[ESC1]
+Dir1=4727 'norte
+Dir2=4729
+Dir3=4726
+Dir4=4728 'sur
+
+[ESC3]
+Dir3=902 'norte
+Dir1=903
+Dir4=904
+Dir2=905 'sur
+
+[ESC4]
+Dir3=928 'norte
+Dir1=929
+Dir4=930
+Dir2=931 'sur
+
+[ESC5]
+Dir3=13278 'norte
+Dir1=13279
+Dir4=13280
+Dir2=13281 'sur
+
+[ESC6]
+Dir3=4856 'norte
+Dir1=4857
+Dir4=4858
+Dir2=4859 'sur
+
+[ESC7]
+Dir3=20071 'norte
+Dir1=20072
+Dir4=20073
+Dir2=20074 'sur
+
+[ESC8]
+Dir3=20098 'norte
+Dir1=20099
+Dir4=20100
+Dir2=20101 'sur
+
+[ESC9]
+Dir3=20125 'norte
+Dir1=20126
+Dir4=20127
+Dir2=20128 'sur
+
+[ESC10]
+Dir3=20152 'norte
+Dir1=20153
+Dir4=20154
+Dir2=20155 'sur
